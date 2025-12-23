@@ -11,7 +11,6 @@ struct LabyrinthGameView: View {
 	@StateObject private var motion = MotionManager()
 	@State private var ballPosition = CGPoint(x: 0, y: 0)
 	@State private var showWinAlert = false
-	@State private var showBoundaryAlert = false
 	@State private var isGameActive = true
 	@State private var countdown = 3 // Новое состояние для отсчета
 	@State private var showCountdown = true // Показывать ли отсчет
@@ -20,7 +19,6 @@ struct LabyrinthGameView: View {
 	private let sensitivity: CGFloat = 1
 	private let ballRadius: CGFloat = 20
 	private let finishZone = CGRect(x: 150, y: 400, width: 100, height: 100)
-	private let arrowMoveDistance: CGFloat = 5 // Расстояние перемещения по стрелкам
 	
 	// Стены лабиринта
 	private let walls: [CGRect] = [
